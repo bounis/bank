@@ -1,11 +1,11 @@
-package org.bank.dao;
+package org.bank.account;
 
 
+import java.util.HashSet;
 import org.assertj.core.api.Assertions;
 import org.bank.BaseTest;
-import org.bank.domain.Account;
-import org.bank.domain.User;
-import org.bank.exception.UserDoesNotHaveAnyAccountException;
+import org.bank.user.User;
+import org.bank.user.UserDoesNotHaveAnyAccountException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -25,7 +25,7 @@ public class AccountDaoTest extends BaseTest {
 
         //given
         User user = new User("firstName", "lastName");
-        Account expectedAccount = new Account(0, user);
+        Account expectedAccount = new Account(0, user, new HashSet<>());
 
         //when
         Account account = accountDao.findByUser(user);

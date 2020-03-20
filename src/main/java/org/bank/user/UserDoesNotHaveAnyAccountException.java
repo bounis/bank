@@ -1,4 +1,4 @@
-package org.bank.exception;
+package org.bank.user;
 
 public class UserDoesNotHaveAnyAccountException extends RuntimeException {
 

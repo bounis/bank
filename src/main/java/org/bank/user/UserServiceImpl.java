@@ -1,8 +1,7 @@
-package org.bank.service;
+package org.bank.user;
 
-import org.bank.dao.AccountDao;
-import org.bank.domain.Account;
-import org.bank.domain.User;
+import org.bank.account.Account;
+import org.bank.account.AccountDao;
 
 public class UserServiceImpl implements UserService {
 

@@ -1,47 +1,35 @@
-package org.bank.domain;
+package org.bank.account;
 
 import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
+import org.bank.operation.Operation;
+import org.bank.user.User;
 
 public class Account {
 
-    private long balance;
-    private User user;
-    private Set<Operation> operations;
+    private final long balance;
+    private final User user;
+    private final Set<Operation> operations;
 
 
-    public Account() {
-    }
-
-    public Account(long balance, User user) {
+    public Account(long balance, User user, Set<Operation> operations) {
         this.balance = balance;
         this.user = user;
+        this.operations = operations;
     }
 
     public long getBalance() {
         return balance;
     }
 
-    public void setBalance(long balance) {
-        this.balance = balance;
-    }
-
     public User getUser() {
         return user;
     }
 
-    public void setUser(User user) {
-        this.user = user;
-    }
-
     public Set<Operation> getOperations() {
-        if (operations == null) {
-            operations = new HashSet<>();
-        }
-        return operations;
+        return new HashSet<>(operations);
     }
-
 
     @Override
     public boolean equals(Object o) {

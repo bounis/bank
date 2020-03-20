@@ -1,4 +1,4 @@
-package org.bank.domain;
+package org.bank.user;
 
 import java.util.Objects;
 

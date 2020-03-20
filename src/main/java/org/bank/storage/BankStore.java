@@ -2,8 +2,8 @@ package org.bank.storage;
 
 import java.util.HashMap;
 import java.util.Map;
-import org.bank.domain.Account;
-import org.bank.domain.User;
+import org.bank.account.Account;
+import org.bank.user.User;
 
 public class BankStore {
 

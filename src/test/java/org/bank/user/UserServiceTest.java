@@ -1,9 +1,9 @@
-package org.bank.service;
+package org.bank.user;
 
+import java.util.HashSet;
 import org.assertj.core.api.Assertions;
 import org.bank.BaseTest;
-import org.bank.domain.Account;
-import org.bank.domain.User;
+import org.bank.account.Account;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -21,7 +21,7 @@ public class UserServiceTest extends BaseTest {
 
         //given
         User user = new User("firstName", "lastName");
-        Account expectedAccount = new Account(0, user);
+        Account expectedAccount = new Account(0, user, new HashSet<>());
 
         //when
         Account userAccount = userService.findUserAccount(user);

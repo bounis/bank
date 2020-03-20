@@ -1,4 +1,4 @@
-package org.bank.exception;
+package org.bank.account;
 
 public class InsufficientAccountBalanceException extends RuntimeException {
 

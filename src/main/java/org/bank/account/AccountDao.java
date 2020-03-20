@@ -1,9 +1,8 @@
-package org.bank.dao;
+package org.bank.account;
 
-import org.bank.domain.Account;
-import org.bank.domain.User;
-import org.bank.exception.UserDoesNotHaveAnyAccountException;
 import org.bank.storage.BankStore;
+import org.bank.user.User;
+import org.bank.user.UserDoesNotHaveAnyAccountException;
 
 public class AccountDao {
 
